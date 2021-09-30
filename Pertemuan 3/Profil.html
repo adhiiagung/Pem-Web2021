@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Profil</title>
+        <link rel="stylesheet" href="cssgame.css">
+        <style>
+
+        </style>
+    </head>
+        <body>
+            <div class="header">
+                <h1>My Profile</h1>
+            </div>
+            <div id="topnav" class="topnav">
+                <a href="index.html">Home</a>
+                <a href="video.html">Video</a>
+                <a href="#">About</a>
+            </div>
+            <div class="content">
+                <div class="card">
+                    <h1 align="center">Selamat Datang Di Profil Saya</h1>
+                    <br>
+                    <br>
+                    <center>
+                        <img
+                        src="poto.JPG"
+                        alt="Hallo"
+                        width="350px"
+                        >
+                    </center>
+                    <br>
+                    <br>
+                    <center>
+                        <div style="width: 950px; text-align: justify;">
+                            <p align="center">Adhi Agung Nugroho</p>
+                            <p align="center">A11.2020.12818</p>
+                            <p align="center">UNIVERSITAS DIAN NUSWANTORO</p>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <div class="footer">
+                <h3>Copyright &copy; <script>document.write(new Date().getFullYear())</script> by Adhi Agung, All Right Reserved</h3>
+            </div>
+
+            <script>
+                window.onscroll = function() {myfunction()};
+
+                var header = document.getElementById("topnav");
+                var fixed = header.offsetTop;
+
+                function myfunction() {
+                    if (window.pageYOffset > fixed) {
+                        header.classList.add("fixed");    
+                    } else {
+                        header.classList.remove("fixed");
+                    }
+                }
+            </script>
+        </body>
+</html>

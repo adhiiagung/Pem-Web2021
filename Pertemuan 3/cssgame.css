@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+}
+
+.header{
+    background-color: darkgrey;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+.topnav{
+   overflow: hidden;
+   background-color: rgb(255, 171, 61);
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: rgb(162, 209, 209);
+    color: black;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.content {
+    padding: 20px;
+}
+
+.fixed + .content{
+    padding-top: 102px;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
