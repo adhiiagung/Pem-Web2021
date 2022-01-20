@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Adhi Agung Nugroho</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css'  href='css/style.css'>
+    <link rel='stylesheet' type='text/css'  href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'>
+</head>
+<body>
+
+    <!-- header -->
+    <div class="medsos">
+        <div class="container">
+            <ul>
+                <li><a href="https://web.facebook.com/adhii.agung"><i class="fab fa-facebook"></i></i></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCyjzmyS0bQ3lIxrMl84_nhA"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.instagram.com/adhii_aagung/"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <div class="container">        
+            <h1><a href="index.html">BOTANIA SHOP</a></h1>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="product.html">PRODUCT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li class="active"><a href="bill.html">BILL</a></li>
+
+            </ul>
+        </div>
+    </header>
+    <section class="banner">
+        <h2>WELCOME TO BOTANIA</h2>
+    </section>
+
+        <!-- form pembelian -->
+        <form name="form">
+            <h3 class="write"><center>Form Pembelian</center></h3>
+            <label>Nama</label>
+                <input type="text" name="input_nama" size=10>
+            <br>
+
+            <label>Email</label>
+                <input type="text" name="input_email" size=10>
+            <br>
+
+            <label>Nama Barang</label>
+                <input type="text" name="output_namabarang" size=10>
+            <br/>
+
+            <label>Harga Barang</label>
+                <input type="text" name="output_hargatujuan" size=10>
+            <br/>
+
+            <label>Member?</label>
+                <input type="checkbox" name="memberbukan" onchange="apakahmember()"/>
+            <label>Diskon</label>
+                <input type="text" name="output_diskon" size=10/>
+            <br/>
+            
+            <label>Total Harga</label>
+                <input type="text" name="output_totalharga" size=10>
+            <br/>
+                <input type="button" Onclick="payment()" value='Bayar'>
+        </form>
+        <!-- form pembelian -->
+
+        <script type='text/javascript'>
+            alert("Anda memasuki Form Pembelian Tiket.")
+
+            function apakahmember(){
+                if (document.form.memberbukan.checked == true){diskon = 0.10;}
+                else{diskon=0;}
+                document.form.output_diskon.value=eval(diskon)*(eval(document.form.output_tambahanbiaya.value) + eval(document.form.output_hargatujuan.value));
+           }
+
+            function totalharga(){
+                var harga = (document.form.input_harga.value);
+                document.form.output_totalharga.value=eval(jumlah)*(eval(document.form.output_tambahanbiaya.value)+eval(document.form.output_hargatujuan.value))-eval(document.form.output_diskon.value)
+           }
+
+           function payment(){
+               alert("Bukti Transaksi Pembelian Anda akan di Kirim Ke Email Anda")
+           }
+        </script>
+
+        <!-- footer -->
+        <footer>
+            <div class="container">
+                <h3>Copyright &copy; <script>document.write(new Date().getFullYear())</script> by Adhi Agung N, All Right Reserved</h3>
+            </div>
+        </footer>
+        <!-- footer -->
+    </body>
+</html>
